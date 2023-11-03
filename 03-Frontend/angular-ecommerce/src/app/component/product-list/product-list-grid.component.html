@@ -1,0 +1,38 @@
+<div class="main-content">
+   <div class="section-content section-content-p30">
+      <div class="container-fluid">
+         <div class="row">
+            <div *ngFor="let product of products" class="col-md-3">
+               <div class="product-box">
+                  <a [routerLink]="['/product', product.id]">
+                     <img src="{{product.imageUrl}}" class="img-responsive" />
+                  </a>
+                  <a [routerLink]="['/product', product.id]">
+                     <h1>{{product.name}}</h1>
+                  </a>
+                  <div class="price">{{product.unitPrice | currency:"USD"}}</div>
+                  <button (click)="addToCart(product)" class="btn btn-primary btn-sm">Add to cart</button>
+               </div>
+
+            </div>
+            <!-- when product not available -->
+            <div *ngIf="products?.length == 0" class="alert alert-warning" col-md-12 role="alert">
+               No product found.
+            </div>
+         </div>
+
+         <!-- begin footer for pagination -->
+
+         <!-- <div style="text-align: right;">
+            <button (click)="loadPreviousPage()" [disabled]="currentPage === 0" mat-raised-button color="primary">Previous</button>
+            <button (click)="loadNextPage()" mat-raised-button color="primary" style="margin-left: 20px;">Next</button>
+          </div> -->
+         <div *ngIf="paginationShow" style="margin-left: 30%;">
+            <ngb-pagination [(page)]="currentPage" [pageSize]="2" [maxSize]="5" [boundaryLinks]="true"
+               [collectionSize]="18" (pageChange)="listProduct()">
+            </ngb-pagination>
+         </div>
+         <!-- end footer for pagination -->
+      </div>
+   </div>
+</div>

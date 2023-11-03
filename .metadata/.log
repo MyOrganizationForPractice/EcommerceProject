@@ -1,0 +1,31 @@
+!SESSION 2023-11-03 19:10:52.865 -----------------------------------------------
+eclipse.buildId=4.22.0.I20211124-1800
+java.version=17.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data C:\Users\riasi\OneDrive\Desktop\ecommerce-project -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+This is a continuation of log file C:\Users\riasi\OneDrive\Desktop\ecommerce-project\.metadata\.bak_0.log
+Created Time: 2023-11-03 19:11:08.388
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-03 19:11:08.389
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-03 19:11:08.390
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.cgPJqzpi => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-03 19:11:08.417
+!MESSAGE classpath=93 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-03 19:11:08.424
+!MESSAGE buffering callback sts4.classpath.cgPJqzpi spring-boot-ecommerce false 93
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-03 19:11:08.426
+!MESSAGE executing callback sts4.classpath.cgPJqzpi 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-11-03 19:11:08.948
+!MESSAGE executing callback sts4.classpath.cgPJqzpi SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2023-11-03 19:11:10.966
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
