@@ -1,0 +1,20 @@
+package com.ecommerce.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ecommerce.dao.CountryRepository;
+import com.ecommerce.entity.Country;
+
+public class CountryServiceImpl implements CountryService{
+
+	@Autowired
+	private CountryRepository countryRepository;
+	
+	@Override
+	public List<Country> getAllCountry() {
+		return (List<Country>) this.countryRepository.findAll();
+	}
+
+}

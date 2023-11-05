@@ -1,0 +1,22 @@
+package com.ecommerce.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ecommerce.dao.StateRepository;
+import com.ecommerce.entity.State;
+
+@RestController
+@RequestMapping("/state")
+public class StateController {
+
+	@Autowired
+	private StateRepository stateRepository;
+	
+	public List<State> getAllState(){
+	  return (List<State>) this.stateRepository.findAll();
+	}
+}

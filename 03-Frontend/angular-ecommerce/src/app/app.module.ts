@@ -13,6 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { MatButtonModule } from '@angular/material/button';
 import { CartStatusComponent } from './component/cart-status/cart-status.component';
 import { CartDetailComponent } from './component/cart-detail/cart-detail.component';
+import { CheckoutComponent } from './component/checkout/checkout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { CartDetailComponent } from './component/cart-detail/cart-detail.compone
     ProductDetailComponent,
     CartStatusComponent,
     CartDetailComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

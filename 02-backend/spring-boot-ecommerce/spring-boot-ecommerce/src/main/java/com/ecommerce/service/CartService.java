@@ -10,5 +10,7 @@ public interface CartService {
 	public List<Cart>  saveToCart(Product cart);
 	
 	public List<Cart>  IncDecProduct(int userId, int process, String productName);
+	
+	public List<Cart>  deletedItemFromCart(Cart cart);
 
 }

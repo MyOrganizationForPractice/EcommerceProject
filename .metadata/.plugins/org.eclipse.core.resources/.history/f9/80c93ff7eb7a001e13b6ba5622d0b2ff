@@ -1,0 +1,9 @@
+package com.ecommerce.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.ecommerce.entity.Country;
+
+public interface CountryRepository extends CrudRepository<Country, Integer>{
+
+}

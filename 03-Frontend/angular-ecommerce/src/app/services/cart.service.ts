@@ -63,7 +63,11 @@ export class CartService {
     return this.http.get(`${baseUrl}/cart/`);
   }
 
-  incDecInCart(userId:number, process:number, productName:any){
-     return this.http.patch(`${baseUrl}/cart/${userId}/${process}`, productName);
+  incDecInCart(userId: number, process: number, productName: any) {
+    return this.http.patch(`${baseUrl}/cart/${userId}/${process}`, productName);
+  }
+
+  deletItem(item: any) {
+    return this.http.patch(`${baseUrl}/cart/delete`, item);
   }
 }

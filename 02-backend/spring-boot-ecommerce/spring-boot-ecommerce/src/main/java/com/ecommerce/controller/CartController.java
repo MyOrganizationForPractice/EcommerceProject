@@ -3,6 +3,8 @@ package com.ecommerce.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,4 +43,11 @@ public class CartController {
 			@PathVariable("process") int process, @RequestBody String productName){
 		return this.cartService.IncDecProduct(userId, process, productName);
 	}
+	
+	@PatchMapping("/delete")
+	public ResponseEntity<List<Cart>> deleteItemOfCart(@RequestBody Cart cart){
+		List<Cart> list = this.cartService.deletedItemFromCart(cart);
+		return new ResponseEntity<>(list, HttpStatus.ACCEPTED);
+	}
+	
 }

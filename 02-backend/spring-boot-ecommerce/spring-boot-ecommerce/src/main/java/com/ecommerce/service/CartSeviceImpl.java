@@ -61,15 +61,34 @@ public class CartSeviceImpl implements CartService{
 		List<Cart> cartProducts = this.cartRepository.getByUserId(1);
 		for(Cart c : cartProducts ) {
 			if(c.getName().equals(productName) && process == 1) {
+				
 				c.setProductCount(c.getProductCount()+1);
 				this.cartRepository.save(c);
 				break;
+				
 			}else if(c.getName().equals(productName) && process == 0){
+				if(c.getProductCount() == 1) {
+					this.cartRepository.delete(c);
+				}else {
 				c.setProductCount(c.getProductCount()-1);
 				this.cartRepository.save(c);
 				break;
+		     	}
 			}
 		}
-		return cartProducts;
+		return this.cartRepository.getByUserId(1);
+	}
+
+
+	@Override
+	public List<Cart> deletedItemFromCart(Cart cart) {
+		 List<Cart> products = this.cartRepository.getByUserId(1);
+		 for(Cart c : products){
+			 if(c.getName().equals(cart.getName())){
+				 this.cartRepository.delete(c);
+				 break;
+			 }
+		 }
+		return this.cartRepository.getByUserId(1);
 	}
 }

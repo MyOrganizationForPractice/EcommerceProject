@@ -1,0 +1,10 @@
+package com.ecommerce.service;
+
+import java.util.List;
+
+import com.ecommerce.entity.Country;
+
+public interface CountryService {
+
+	public List<Country> getAllCountry();
+}

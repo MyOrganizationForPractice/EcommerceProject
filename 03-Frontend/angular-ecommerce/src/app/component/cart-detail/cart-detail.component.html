@@ -23,18 +23,13 @@
                                         <button (click)="incDecMethod(1, cart.name)" class="btn btn-primary btn-sm">
                                             <i class="fas fa-plus"></i>
                                         </button>
-                                        <button (click)="incDecMethod(0, cart.name)" class="btn btn-primary btn-sm" style="margin-left: 10px;">
+                                        <button (click)="incDecMethod(0, cart.name)" class="btn btn-primary btn-sm"
+                                            style="margin-left: 10px;">
                                             <i class="fas fa-minus"></i>
                                         </button>
+                                        <button (click)="removeItem(cart)" style="margin-top: 5px;"
+                                            class="btn btn-primary btn-sm">Remove</button>
                                     </div>
-                                    <!-- <div class="col ml-1 mr-1 mt-1">
-                                        {{cart.productCount}}
-                                    </div> -->
-                                    <!-- <div class="col">
-                                        <button class="btn btn-primary btn-sm">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                                    </div> -->
                                     <div class="col-8"></div>
                                 </div>
                             </div>
@@ -47,6 +42,7 @@
                             <p>TotalQuantity: {{totalQuantity}}</p>
                             <p>Shipping: Free</p>
                             <p>TotalAmout: {{totalPrice}}</p>
+                            <a routerLink="/checkout" style="margin-bottom: 10px; font-size: 20px;">Checkout</a>
                         </td>
                     </tr>
                 </table>
