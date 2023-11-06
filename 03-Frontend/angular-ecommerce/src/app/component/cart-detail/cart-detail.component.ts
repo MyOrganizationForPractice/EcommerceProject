@@ -25,6 +25,7 @@ export class CartDetailComponent implements OnInit {
         this.totalPrice += i.productCount * i.productPrice;
         this.totalQuantity += i.productCount;
       }
+      this.cartService.updateCartStatus(this.totalPrice, this.totalQuantity);
     })
   }
 
@@ -37,6 +38,7 @@ export class CartDetailComponent implements OnInit {
         this.totalPrice += i.productCount * i.productPrice;
         this.totalQuantity += i.productCount;
       }
+      this.cartService.updateCartStatus(this.totalPrice, this.totalQuantity);
     })
   }
 
@@ -60,6 +62,7 @@ export class CartDetailComponent implements OnInit {
             this.totalPrice += i.productCount * i.productPrice;
             this.totalQuantity += i.productCount;
           }
+          this.cartService.updateCartStatus(this.totalPrice, this.totalQuantity);
           Swal.fire('Deleted Successfully!', '', 'info');
         })
       }

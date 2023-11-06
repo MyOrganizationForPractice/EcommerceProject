@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Country } from 'src/app/model/country';
 import { State } from 'src/app/model/state';
+import { CartService } from 'src/app/services/cart.service';
 import { LuvToShopFormService } from 'src/app/services/luv-to-shop-form.service';
 
 @Component({
@@ -19,39 +20,43 @@ export class CheckoutComponent implements OnInit {
   countries: Country[] = [];
   billingState: State[] = [];
   shippingState: State[] = [];
-
+  cartItem: any = {};
 
   constructor(private formBuilder: FormBuilder,
-    private luvToShopFormService: LuvToShopFormService) { }
+    private luvToShopFormService: LuvToShopFormService,
+    private cartService: CartService) { }
+
   ngOnInit(): void {
+    this.reviewCartDetail();
     this.checkoutFormGroup = this.formBuilder.group({
       customer: this.formBuilder.group({
         firstName: new FormControl('', [Validators.required, Validators.minLength(2)]),
         lastName: new FormControl('', [Validators.required, Validators.minLength(2)]),
-        email: new FormControl('', [Validators.required,
-        Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2-4}$')])
+        email: new FormControl('', [Validators.required, Validators.email,
+          // Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2-4}$'),
+        ])
       }),
       shippingAddress: this.formBuilder.group({
-        street: [''],
-        city: [''],
-        state: [''],
-        country: [''],
-        zipCode: [''],
+        street: new FormControl('', [Validators.required, Validators.minLength(2)]),
+        city: new FormControl('', [Validators.required, Validators.minLength(2)]),
+        state: new FormControl('', [Validators.required]),
+        country: new FormControl('', [Validators.required]),
+        zipCode: new FormControl('', [Validators.required, Validators.minLength(2)]),
       }),
       billingAddress: this.formBuilder.group({
-        street: [''],
-        city: [''],
-        state: [''],
-        country: [''],
-        zipCode: [''],
+        street: new FormControl('', [Validators.required, Validators.minLength(2)]),
+        city: new FormControl('', [Validators.required, Validators.minLength(2)]),
+        state: new FormControl('', [Validators.required]),
+        country: new FormControl('', [Validators.required]),
+        zipCode: new FormControl('', [Validators.required, Validators.minLength(2)]),
       }),
       CreditCard: this.formBuilder.group({
-        cardType: [''],
-        nameOnCard: [''],
-        cardNumber: [''],
-        securityCode: [''],
-        expirationMonth: [''],
-        expirationYear: [''],
+        cardType: new FormControl('', [Validators.required]),
+        nameOnCard: new FormControl('', [Validators.required, Validators.minLength(2)]),
+        cardNumber: new FormControl('', [Validators.required, Validators.pattern('[0-9]{16}')]),
+        securityCode: new FormControl('', [Validators.required, Validators.pattern('[0-9]{16}')]),
+        expirationMonth: new FormControl('', []),
+        expirationYear: new FormControl('', []),
       })
     });
 
@@ -69,6 +74,17 @@ export class CheckoutComponent implements OnInit {
     this.getCountry();
     this.getState();
   }
+
+  reviewCartDetail() {
+    this.cartService.getCarData().subscribe((data) => {
+      this.cartItem = data;
+      for (let i of this.cartItem) {
+        this.totalPrice += i.productCount * i.productPrice;
+        this.totalQuantity += i.productCount;
+      }
+    })
+  }
+
   getCountry() {
     this.luvToShopFormService.getCountries().subscribe((data) => {
       this.countries = data;
@@ -83,7 +99,10 @@ export class CheckoutComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.checkoutFormGroup.get('customer')?.value);
+    if (this.checkoutFormGroup.invalid) {
+      this.checkoutFormGroup.markAllAsTouched();
+    }
+    console.log(this.checkoutFormGroup);
   }
 
   copyShippingAddressToBillingAddress(event: any) {
@@ -110,7 +129,6 @@ export class CheckoutComponent implements OnInit {
       startMonth = 1;
     }
     this.luvToShopFormService.getCreditCardMonth(startMonth).subscribe((data) => {
-      console.log('retried month ' + JSON.stringify(data));
       this.creditCardMonth = data;
     })
   }
@@ -135,5 +153,55 @@ export class CheckoutComponent implements OnInit {
   }
   get email() {
     return this.checkoutFormGroup.get('customer.email')
+  }
+  get shippingAddressStreet() {
+    return this.checkoutFormGroup.get('shippingAddress.street')
+  }
+  get shippingAddresscity() {
+    return this.checkoutFormGroup.get('shippingAddress.city')
+  }
+  get shippingAddresszipCode() {
+    return this.checkoutFormGroup.get('shippingAddress.zipCode')
+  }
+  get shippingAddressState() {
+    return this.checkoutFormGroup.get('shippingAddress.state')
+  }
+  get shippingAddressCountry() {
+    return this.checkoutFormGroup.get('shippingAddress.country')
+  }
+
+  get billingAddressStreet() {
+    return this.checkoutFormGroup.get('billingAddress.street')
+  }
+  get billingAddresscity() {
+    return this.checkoutFormGroup.get('billingAddress.city')
+  }
+  get billingAddresszipCode() {
+    return this.checkoutFormGroup.get('billingAddress.zipCode')
+  }
+  get billingAddressState() {
+    return this.checkoutFormGroup.get('billingAddress.state')
+  }
+  get billingAddressCountry() {
+    return this.checkoutFormGroup.get('billingAddress.country')
+  }
+
+  get cardType() {
+    return this.checkoutFormGroup.get('CreditCard.cardType')
+  }
+  get nameOnCard() {
+    return this.checkoutFormGroup.get('CreditCard.nameOnCard')
+  }
+  get cardNumber() {
+    return this.checkoutFormGroup.get('CreditCard.cardNumber')
+  }
+  get securityCode() {
+    return this.checkoutFormGroup.get('CreditCard.securityCode')
+  }
+  get expirationMonth() {
+    return this.checkoutFormGroup.get('CreditCard.expirationMonth')
+  }
+  get expirationYear() {
+    return this.checkoutFormGroup.get('CreditCard.expirationYear')
   }
 }
