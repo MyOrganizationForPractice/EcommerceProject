@@ -1,0 +1,24 @@
+package com.ecommerce.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ecommerce.dao.CustomerRepository;
+import com.ecommerce.dto.Purchase;
+import com.ecommerce.dto.PurchaseResponse;
+
+@Service
+public class CheckoutServiceImpl implements CheckoutService{
+
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	@Override
+	public PurchaseResponse placeOrder(Purchase purchase) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

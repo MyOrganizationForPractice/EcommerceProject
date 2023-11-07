@@ -20,11 +20,11 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="order")
+@Table(name="tblorder")
 public class Order {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="orderId")
 	private Long orderId;
 	
@@ -88,11 +88,15 @@ public class Order {
 		this.shippingAddress = shippingAddress;
 	}
 
+	public void setBillingAddress(Address billingAddress) {
+		this.billingAddress = billingAddress;
+	}
+
 	public Address getBillingAddress() {
 		return billingAddress;
 	}
 
-	public void setBillingAddress(Address billingAddress) {
+	public void PurchaseResponse(Address billingAddress) {
 		this.billingAddress = billingAddress;
 	}
 

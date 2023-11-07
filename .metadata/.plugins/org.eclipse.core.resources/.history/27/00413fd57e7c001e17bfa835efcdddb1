@@ -1,0 +1,40 @@
+package com.ecommerce.service;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ecommerce.dao.CustomerRepository;
+import com.ecommerce.dto.Purchase;
+import com.ecommerce.dto.PurchaseResponse;
+import com.ecommerce.entity.Order;
+
+import jakarta.transaction.Transactional;
+
+@Service
+public class CheckoutServiceImpl implements CheckoutService{
+
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	public CheckoutServiceImpl(CustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
+	}
+	
+	@Override
+	@Transactional
+	public PurchaseResponse placeOrder(Purchase purchase) {
+		Order order = purchase.getOrder();
+		String orderTrackingNumber = generateTrackingNumber();
+		order.setOrderTrackingNumber(orderTrackingNumber);
+		return null;
+	}
+
+	private String generateTrackingNumber() {	
+		return UUID.randomUUID().toString();
+	}
+	
+	
+
+}

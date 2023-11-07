@@ -1,0 +1,18 @@
+package com.ecommerce.dto;
+
+public class PurchaseResponse {
+
+	private String OrderTrackingNumber;
+
+	public String getOrderTrackingNumber() {
+		return OrderTrackingNumber;
+	}
+
+	public void setOrderTrackingNumber(String orderTrackingNumber) {
+		OrderTrackingNumber = orderTrackingNumber;
+	}
+	
+	
+	
+	
+}

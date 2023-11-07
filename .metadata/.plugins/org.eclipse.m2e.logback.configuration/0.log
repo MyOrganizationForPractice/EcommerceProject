@@ -1143,3 +1143,65 @@
 2023-11-05 21:44:03,578 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-11-05 21:44:03,586 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2023-11-05 21:44:03,586 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:13:52,860 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-11-06 13:28:03,037 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-11-06 13:30:08,208 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:30:08,230 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:30:08,234 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:30:28,308 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:30:28,378 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:30:28,380 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:30:31,134 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:30:31,145 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:30:31,148 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:31:15,327 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:31:15,335 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:31:15,338 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:31:28,196 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:31:28,425 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:31:28,427 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:32:35,216 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:32:35,222 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:32:35,225 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:33:38,822 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:33:38,831 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:33:38,833 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:35:05,760 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:35:05,770 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:35:05,775 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:35:48,375 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:35:48,459 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:35:48,462 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:36:10,401 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:36:10,410 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:36:10,413 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:37:48,296 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:37:48,304 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:37:48,307 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:50:29,831 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:50:29,848 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:50:29,850 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 13:59:18,468 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 13:59:18,511 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 13:59:18,513 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 14:00:10,850 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 14:00:10,913 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 14:00:10,916 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 14:01:02,926 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 14:01:02,937 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 14:01:02,938 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 14:01:08,266 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 14:01:08,285 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 14:01:08,288 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 14:03:49,001 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 14:03:49,009 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 14:03:49,012 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 14:05:25,286 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 14:05:25,293 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 14:05:25,297 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 14:09:49,222 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 14:09:49,230 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 14:09:49,232 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources
+2023-11-06 14:16:15,917 [Worker-42: Launching SpringBootEcommerceApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-11-06 14:16:15,925 [Worker-42: Launching SpringBootEcommerceApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-11-06 14:16:15,927 [Worker-42: Launching SpringBootEcommerceApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\riasi\OneDrive\Desktop\ecommerce-project\02-backend\spring-boot-ecommerce\spring-boot-ecommerce\src\test\resources

@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Country } from 'src/app/model/country';
+import { Order } from 'src/app/model/order';
+import { OrderItem } from 'src/app/model/order-item';
+import { Purchase } from 'src/app/model/purchase';
 import { State } from 'src/app/model/state';
 import { CartService } from 'src/app/services/cart.service';
+import { CheckoutService } from 'src/app/services/checkout.service';
 import { LuvToShopFormService } from 'src/app/services/luv-to-shop-form.service';
 
 @Component({
@@ -24,7 +29,9 @@ export class CheckoutComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
     private luvToShopFormService: LuvToShopFormService,
-    private cartService: CartService) { }
+    private cartService: CartService,
+    private checkoutService: CheckoutService,
+    private route: Router) { }
 
   ngOnInit(): void {
     this.reviewCartDetail();
@@ -101,8 +108,37 @@ export class CheckoutComponent implements OnInit {
   onSubmit() {
     if (this.checkoutFormGroup.invalid) {
       this.checkoutFormGroup.markAllAsTouched();
+      return;
     }
-    console.log(this.checkoutFormGroup);
+
+    let order = new Order();
+    order.totalPrice = this.totalPrice;
+    order.totalQuantity = this.totalQuantity;
+
+    const cartItems = this.cartService.cartItem;
+    // let orderItem : OrderItem[] = [];
+    // for(let i=0;i<cartItems.length;i++){
+    //   orderItem[i] = new OrderItem(cartItems[i]);
+    // }
+    let orderItemShort: OrderItem[] = cartItems.map(tempCartItem => new OrderItem(tempCartItem))
+
+    let purchase = new Purchase();
+    purchase.Customer = this.checkoutFormGroup.controls['customer'].value;
+
+
+    purchase.shippingAddress = this.checkoutFormGroup.controls['shippingAddress'].value;
+    const shippingState: State = JSON.parse(JSON.stringify(purchase.shippingAddress.state));
+    const shippingCountry: Country = JSON.parse(JSON.stringify(purchase.shippingAddress.country));
+    purchase.shippingAddress.state = shippingState.name;
+    purchase.shippingAddress.country = shippingCountry.name;
+
+
+    purchase.billingAddress = this.checkoutFormGroup.controls['billingAddress'].value;
+    const billingState: State = JSON.parse(JSON.stringify(purchase.billingAddress.state));
+    const billingCountry: Country = JSON.parse(JSON.stringify(purchase.billingAddress.country));
+    purchase.billingAddress.state = billingState.name;
+    purchase.billingAddress.country = billingCountry.name;
+
   }
 
   copyShippingAddressToBillingAddress(event: any) {

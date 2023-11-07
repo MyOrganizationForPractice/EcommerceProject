@@ -16,4 +16,37 @@ public class Purchase {
 	private Set<OrderItem> orderItem;
 	
 	
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	public Address getShippingAddress() {
+		return shippingAddress;
+	}
+	public void setShippingAddress(Address shippingAddress) {
+		this.shippingAddress = shippingAddress;
+	}
+	public Address getBillingAddress() {
+		return billingAddress;
+	}
+	public void setBillingAddress(Address billingAddress) {
+		this.billingAddress = billingAddress;
+	}
+	public Order getOrder() {
+		return order;
+	}
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+	public Set<OrderItem> getOrderItem() {
+		return orderItem;
+	}
+	public void setOrderItem(Set<OrderItem> orderItem) {
+		this.orderItem = orderItem;
+	}
+	
+	
+	
 }
