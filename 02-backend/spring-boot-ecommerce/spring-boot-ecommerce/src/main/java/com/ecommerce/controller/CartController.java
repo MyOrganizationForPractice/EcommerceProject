@@ -1,10 +1,12 @@
 package com.ecommerce.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -48,6 +50,17 @@ public class CartController {
 	public ResponseEntity<List<Cart>> deleteItemOfCart(@RequestBody Cart cart){
 		List<Cart> list = this.cartService.deletedItemFromCart(cart);
 		return new ResponseEntity<>(list, HttpStatus.ACCEPTED);
+	}
+	
+	@DeleteMapping("/delete/all")
+	public List<Cart> deleteCart(){
+		 this.cartRepository.deleteAll();
+		 List<Cart> list = this.cartRepository.getByUserId(1);
+		 if(list == null) {
+			 return new ArrayList<>();
+		 }else {
+			 return list;
+		 }
 	}
 	
 }

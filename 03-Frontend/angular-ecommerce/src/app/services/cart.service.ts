@@ -70,4 +70,8 @@ export class CartService {
   deletItem(item: any) {
     return this.http.patch(`${baseUrl}/cart/delete`, item);
   }
+
+  deleteItemFromCart(){
+    return this.http.delete(`${baseUrl}/cart/delete/all`);
+  }
 }

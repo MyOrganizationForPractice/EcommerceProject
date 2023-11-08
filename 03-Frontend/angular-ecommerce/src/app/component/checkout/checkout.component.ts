@@ -110,7 +110,6 @@ export class CheckoutComponent implements OnInit {
       this.checkoutFormGroup.markAllAsTouched();
       return;
     }
-
     let order = new Order();
     order.totalPrice = this.totalPrice;
     order.totalQuantity = this.totalQuantity;
@@ -123,22 +122,48 @@ export class CheckoutComponent implements OnInit {
     let orderItemShort: OrderItem[] = cartItems.map(tempCartItem => new OrderItem(tempCartItem))
 
     let purchase = new Purchase();
-    purchase.Customer = this.checkoutFormGroup.controls['customer'].value;
-
+    purchase.customer = this.checkoutFormGroup.controls['customer'].value;
 
     purchase.shippingAddress = this.checkoutFormGroup.controls['shippingAddress'].value;
-    const shippingState: State = JSON.parse(JSON.stringify(purchase.shippingAddress.state));
-    const shippingCountry: Country = JSON.parse(JSON.stringify(purchase.shippingAddress.country));
-    purchase.shippingAddress.state = shippingState.name;
-    purchase.shippingAddress.country = shippingCountry.name;
+    // const shippingState: State = JSON.parse(JSON.stringify(purchase.shippingAddress.state));
+    // const shippingCountry: Country = JSON.parse(JSON.stringify(purchase.shippingAddress.country));
+    // purchase.shippingAddress.state = shippingState.name;
+    // purchase.shippingAddress.country = shippingCountry.name;    
 
 
     purchase.billingAddress = this.checkoutFormGroup.controls['billingAddress'].value;
-    const billingState: State = JSON.parse(JSON.stringify(purchase.billingAddress.state));
-    const billingCountry: Country = JSON.parse(JSON.stringify(purchase.billingAddress.country));
-    purchase.billingAddress.state = billingState.name;
-    purchase.billingAddress.country = billingCountry.name;
+    // const billingState: State = JSON.parse(JSON.stringify(purchase.billingAddress.state));
+    // const billingCountry: Country = JSON.parse(JSON.stringify(purchase.billingAddress.country));
+    // purchase.billingAddress.state = billingState.name;
+    // purchase.billingAddress.country = billingCountry.name;
 
+    purchase.order = order;
+    purchase.orderItem = this.cartItem;
+
+    this.checkoutService.placeOrder(purchase).subscribe({
+      next: response => {
+        alert(`Your order has been placed ${response.orderTrackingNumber}`);
+        this.resetCart();
+        this.cartService.deleteItemFromCart().subscribe((data)=>{
+          this.cartItem = data;
+          console.log('riya cart ' + JSON.stringify(this.cartItem));
+        });
+      },
+      error: err => {
+        alert(`There was an error: ${err.message}`);
+      }
+    });
+
+  }
+  resetCart() {
+    //reset cart data
+    this.cartService.cartItem = [];
+    this.cartService.totalPrice.next(0);
+    this.cartService.totalQuantity.next(0);
+    //reset form
+    this.checkoutFormGroup.reset();
+    //back to form page
+    this.route.navigateByUrl("/products");
   }
 
   copyShippingAddressToBillingAddress(event: any) {
